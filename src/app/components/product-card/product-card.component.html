@@ -1,0 +1,11 @@
+<mat-card class="product-card">
+  <img mat-card-image [src]="product.imageUrl" alt="{{ product.name }}" />
+  <mat-card-title>{{ product.name | capitalize }}</mat-card-title>
+  <mat-card-subtitle>{{ product.price | currency:'HUF' }}</mat-card-subtitle>
+  <mat-card-content>
+    <p>{{ product.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="addToCart()">Kosárba</button>
+  </mat-card-actions>
+</mat-card>

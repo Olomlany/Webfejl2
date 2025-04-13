@@ -1,0 +1,18 @@
+<mat-card *ngIf="items.length > 0">
+    <mat-card-title>Kosár</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let item of items; let i = index">
+          {{ item.name }} – {{ item.price | currency:'HUF' }}
+          <button mat-button color="warn" (click)="removeItem(i)">Törlés</button>
+        </li>
+      </ul>
+      <p><strong>Végösszeg:</strong> {{ total | currency:'HUF' }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="clearCart()">Kosár ürítése</button>
+    </mat-card-actions>
+  </mat-card>
+  
+  <p *ngIf="items.length === 0">A kosár üres.</p>
+  
