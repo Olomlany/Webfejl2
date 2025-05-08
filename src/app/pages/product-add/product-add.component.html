@@ -1,0 +1,20 @@
+<div class="add-product-container">
+    <h2>Új termék hozzáadása</h2>
+  
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <label for="name">Terméknév</label>
+      <input id="name" formControlName="name" type="text" placeholder="Pl. Nyári bikini" />
+  
+      <label for="price">Ár (Ft)</label>
+      <input id="price" formControlName="price" type="number" placeholder="Pl. 7990" />
+  
+      <label for="image">Kép elérési útja</label>
+      <input id="image" formControlName="image" type="text" placeholder="Pl. assets/img/tarka.jpg" />
+  
+      <label for="description">Leírás</label>
+      <textarea id="description" formControlName="description" rows="3" placeholder="Pl. színes nyári kollekció"></textarea>
+  
+      <button type="submit" [disabled]="productForm.invalid">Mentés</button>
+    </form>
+  </div>
+  

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product.model';
 import { MatCardModule } from '@angular/material/card';
@@ -17,6 +17,8 @@ import { CapitalizePipe } from '../../pipes/capitalize.pipe';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
+  @Output() delete = new EventEmitter<number>();
+
 
   constructor(private cartService: CartService, private router: Router) {}
 
@@ -24,4 +26,9 @@ export class ProductCardComponent {
     this.cartService.addToCart(this.product);
     this.router.navigate(['/kosar']);
   }
+
+  onDelete() {
+    this.delete.emit(this.product.id!); 
+  }
+
 }

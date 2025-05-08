@@ -4,6 +4,10 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartComponent } from './pages/cart/cart.component'; 
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { ProductAddComponent } from './pages/product-add/product-add.component';
+import { ProductEditComponent } from './pages/product-edit/product-edit.component';
+
+
 
 
 export const routes: Routes = [
@@ -12,5 +16,9 @@ export const routes: Routes = [
   { path: 'termek/:id', component: ProductDetailsComponent },
   { path: 'kosar', component: CartComponent }, 
   { path: 'rendeles', component: CheckoutComponent },
-  { path: '**', redirectTo: '' }
+  { path: 'product-add', component: ProductAddComponent },
+  { path: 'product-edit/:id', component: ProductEditComponent },
+  { path: '**', redirectTo: '' },
+
 ];
+

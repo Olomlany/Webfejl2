@@ -1,0 +1,20 @@
+<div class="edit-product-container">
+    <h2>Termék szerkesztése</h2>
+  
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <label for="name">Név:</label>
+      <input id="name" formControlName="name" />
+  
+      <label for="price">Ár:</label>
+      <input id="price" type="number" formControlName="price" />
+  
+      <label for="image">Kép elérési út:</label>
+      <input id="image" formControlName="image" />
+  
+      <label for="description">Leírás:</label>
+      <textarea id="description" formControlName="description"></textarea>
+  
+      <button type="submit" [disabled]="productForm.invalid">Mentés</button>
+    </form>
+  </div>
+  

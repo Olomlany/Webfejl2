@@ -1,5 +1,5 @@
 <mat-card class="product-card">
-  <img mat-card-image [src]="product.imageUrl" alt="{{ product.name }}" />
+  <img [src]="product.image" alt="{{ product.name }}" />
   <mat-card-title>{{ product.name | capitalize }}</mat-card-title>
   <mat-card-subtitle>{{ product.price | currency:'HUF' }}</mat-card-subtitle>
   <mat-card-content>
@@ -7,5 +7,8 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary" (click)="addToCart()">Kosárba</button>
+    <button mat-raised-button color="accent" [routerLink]="['/product-edit', product.id]">Szerkesztés</button>
+    <button mat-raised-button color="warn" (click)="onDelete()">Törlés</button>
   </mat-card-actions>
 </mat-card>
+
