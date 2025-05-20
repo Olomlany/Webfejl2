@@ -6,6 +6,7 @@ Ez a projekt egy Angular keretrendszer segítségével készült reszponzív fü
 
 **GitHub repo (public)**:  
 https://github.com/Olomlany/Furdoruha-webshop
+Host link:  https://furdoruhawebshop.web.app/
 
 ## ✅ Teljesített követelmények
 
