@@ -6,7 +6,8 @@ Ez a projekt egy Angular keretrendszer segítségével készült reszponzív fü
 
 **GitHub repo (public)**:  
 https://github.com/sajat-felhasznalonev/sunstyle-webshop  
-*(cseréld ki a saját linkeddel!)*
+Host link:  https://furdoruhawebshop.web.app/
+
 
 ## ✅ Teljesített követelmények
 
