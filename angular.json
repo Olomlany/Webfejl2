@@ -37,6 +37,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "./",
+    "outputPath": "dist/furdoaruha-webshop",
               "budgets": [
                 {
                   "type": "initial",
